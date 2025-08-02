@@ -1,0 +1,69 @@
+Unit 1: Thinking in Functions
+1. Boolean Algebra & Adders
+1 = true = on; 0 = false = off. AND (A·B, AB, A*B, A&&B): AND’s are true if all inputs are true. OR (A+B, A||B): OR’s are false if all inputs are false. NOT (-A, ~A,  A): NOT’s change the input to its opposite value. NAND (A · B, AB): NAND’s are false if all inputs are true. NOR (A+B): NOR’s are true if all inputs are false. XOR (A⊕B): XOR’s are true if inputs are different; Exclusive OR. Binary Addition: 0+1 = 1; 0+0 = 0; 1+1 = 10. DeMorgan’s Law: A+B = A · B; A · B =  A + B. Order of Operations: 1) Parentheses, 2) Nots, 3) Ands, 4) Xors, 5) Ors. Examples of XOR: (NOT A NAND B) NAND (A NAND NOT B); Half-Adder: A XOR B = Sum; A AND B = Carry. Full Adder: C XOR (A XOR B) = Sum; A AND B OR C AND (A XOR B) = Carry. 2-Bit Adder: The carry out of the first full adder is the carry in for the second full adder.
+Examples:
+
+
+
+2. Python Basics
+= (assigns); == (tests equality). Letters, digits and underscores can be used in variable names but digits can’t be the first character. Usually functions have lowercase letters with underscores speartang words. Defining a function: def example(x):. Calling a function: print(example(4)). Arguments: variables sent when you call a function, functions can have more than one argument, or they dont have to take an argument at all (). Addition: x+y; Subtraction: x-y; Multiplication: x*y;  Division: x/y; Floor division: x//y; Remainder: x%y; Exponents: x**y. Equal: x == y; Not equal: x != y; Greater than: x > y; Greater than or equal to: x >= y: Less than: x < y; Less than or equal to: x <= y. 
+Examples:
+
+
+
+3. Recursive Codes
+Recursive code: code that calls itself. The base case: causes the recursion to stop. The recursive case: causes the recursion to happen. 
+Examples:
+
+
+
+
+
+Unit 2: Loops, Lists, and Mathematical Regularity
+	1. Lists
+List indexes (example):
+
+Empty list: x = []; Length of a list: len(list). Slicing: 
+your_list[beginning:end] includes the item at index beginning and excludes the item at index end. Store the slice in a variable!
+Adds item to the end of list: list.append(item); Return the (positive) index of the first occurrence of item in list; error if item is not present: list.index(item); Places item at given index in list, shifting everything after that to the right 1: list.insert(index, item); Removes the item at the given index, shifting everything after that to the left 1: del list[index].
+Examples:
+
+
+
+2. Loops
+For loops: The range() command in Python generates a sequence of numbers. It can take one, two, or three arguments, like so: range(a) – this generates a sequence of integers from 0 up to (but not including) a; range(a, b) – this generates a sequence of integers from a up to (but not including) b; range(a, b, c) – this generates a sequence of integers from a up to (but not including) b counting by steps
+of size c. Commonly used: in range(len(list)), because it does whatever is in that loop for every single index.
+Examples:
+
+
+
+While loops: A while loop is exactly like an if statement except that when it gets to the end of the code block it goes back to the while
+statement to check, again, to see if the condition is true. If the condition is true then, it runs the while loop again. A while loop keeps restarting, over and over, as long as the condition in the while statement is true at the top of the loop.
+Examples:
+
+
+
+	3. Files I/O
+New line: \n; Open a file (to write): with open("filename.txt", "w") as f:; Write in a file: f.write("One line.\n"); Open a file: with open("filename.txt") as f:; Assign line to a variable (to read): the_first_line = f.readline(); Strips the line to a variable: the_first_line = f.readline().strip(); Input variable: name = input("Type your name: "); Assign entire string to variable: file_string = f.read(); If you use the "w" argument when you plan to read from the file, Python will instead create a new file with that name and overwrite the old one, deleting anything that was already in it! Be careful that you only use it when you need to.
+Examples:
+
+
+
+	4. Sorting
+Bubble Sort: keep looping over the whole list, swapping each pair of out of order items as we go. Each time we loop across the whole list, one more item will “bubble” up into the correct location. Selection Sort: go index by index, left to right. At each index, we find the minimum value in the part of the list from that index to the end and then swap that into the current index. So, we find the smallest element in the whole list, then swap that into index 0. Insertion Sort: pass across our list from left to right. Each time we get to a new value that we haven’t yet processed, we’ll slide that value to the left until it is inserted at the correct location relative to the other values that the algorithm has seen so far.
+
+
+Unit 3: Strings & Cryptography
+	1. Strings
+Split a string: .split(); Float: float(); Integer: int(); Slicing: string[beginning:end] includes the character at index beginning and excludes the
+character at index end; Lowercase: .lower(); Uppercase: .upper(); Count: .count(“ “); Concatenation, joins two strings together: “hello” + “world”; Repetition, repeats the string: “abc” * 3; Length of a string: len(); Contains/doesn’t contain: ___ in ___/ ___ not in ___.
+Examples:
+
+
+
+	2. Strings and Lists
+Turns string into a list: list(s); Joins: “”.join(l); If in: if _____ in _____:; Enumerate (gives index and thing at index): enumerate();
+Examples/notes:
+
+
+
